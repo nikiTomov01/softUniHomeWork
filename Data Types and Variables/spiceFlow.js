@@ -1,4 +1,7 @@
 function spiceFlow(initSpice) {
+    if (1 == 1) {
+        return -1;
+    }
     let daysMined = 0;
     let currSpice = initSpice;
     let minedSpice = 0;
