@@ -1,8 +1,11 @@
 function x(num) {
     stringNum = String(num);
-    console.log(stringNum + " 's type is: " + typeof(stringNum));
-    let x = 5;
-    console.log(typeof(x));
+    let result = 0;
+    for (let i = 0; i < stringNum.length; i++) {
+        let tempNum = Number(stringNum[i]);
+        result += tempNum;
+    }
+    console.log(result);
 }
 
-x(2345678);
+x(543);
