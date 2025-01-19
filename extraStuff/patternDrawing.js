@@ -38,7 +38,11 @@ function patternDrawing(figure, rows) {
             }
             break;
         case "reverse-pyramid":
-            
+            for (let i = rows; i >= 1; i--) {
+                let spaces = " ".repeat(rows - i);
+                let stars = "*".repeat(2 * i - 1);
+                console.log(spaces + stars);
+            }
             break;
         case "rectangle":
             for (let i = 0; i < rows; i++) {
@@ -53,4 +57,4 @@ function patternDrawing(figure, rows) {
     }
 }
 
-patternDrawing("pyramid", 5);
+patternDrawing("reverse-pyramid", 5);
