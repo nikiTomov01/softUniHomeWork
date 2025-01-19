@@ -1,8 +1,8 @@
-function patternDrawing(figure) {
+function patternDrawing(figure, rows) {
     let figureString = "";
     switch(figure) {
         case "right-triangle":
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < rows; i++) {
                 figureString += "*";
                 console.log(figureString);
             }
@@ -14,7 +14,14 @@ function patternDrawing(figure) {
 
             break;
         case "left-triangle":
-            
+            for (let i = rows; i > 0; i--) {
+                for (let j = 0; j < i; j++) {
+                    figureString += "*";
+                }
+                console.log(figureString);
+                figureString = "";
+            }
+            console.log(figureString);
             break;
         case "pyramid":
 
@@ -28,4 +35,4 @@ function patternDrawing(figure) {
     }
 }
 
-patternDrawing("right-triangle");
+patternDrawing("left-triangle", 5);
