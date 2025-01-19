@@ -8,7 +8,14 @@ function patternDrawing(figure, rows) {
             }
             break;
         case "long-square":
-
+            for (let i = 0; i < rows; i++) {
+                if (i == 0 || i == rows - 1) {
+                    figureString = "*****";
+                    console.log(figureString);
+                    continue;
+                }
+                console.log("*   *");
+            }
             break;
         case "diamond":
 
@@ -30,9 +37,16 @@ function patternDrawing(figure, rows) {
             
             break;
         case "rectangle":
-
+            for (let i = 0; i < rows; i++) {
+                if (i == 0 || i == (rows - 1)) {
+                    figureString = "********";
+                    console.log(figureString);
+                    continue;
+                }
+                console.log("*      *");
+            }
             break;
     }
 }
 
-patternDrawing("left-triangle", 5);
+patternDrawing("long-square", 5);
