@@ -18,7 +18,16 @@ function patternDrawing(figure, rows) {
             }
             break;
         case "diamond":
-
+            for (let i = 1; i <= rows; i++) {
+                let star = "*".repeat(2 * i - 1);
+                let space = " ".repeat(rows - i);
+                console.log(space + star);
+            }
+            for (let i = rows - 1; i >= 1; i--) {
+                let star = "*".repeat(2 * i - 1);
+                let space = " ".repeat(rows - i);
+                console.log(space + star);
+            }
             break;
         case "left-triangle":
             for (let i = rows; i > 0; i--) {
@@ -57,4 +66,4 @@ function patternDrawing(figure, rows) {
     }
 }
 
-patternDrawing("reverse-pyramid", 5);
+patternDrawing("diamond", 3);
