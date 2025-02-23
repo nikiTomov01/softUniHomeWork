@@ -120,6 +120,3 @@ weirdMovies([
     'Captain America directedBy Joe Russo'
     
     ])
-
-
-
