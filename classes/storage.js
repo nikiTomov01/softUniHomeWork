@@ -11,7 +11,6 @@ function storage(arr) {
     sortedDict.forEach(key => {
         console.log(`Term: ${key} => Definition: ${dict[key]}`)
     })
-
 }
 
 storage([
